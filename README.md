@@ -28,3 +28,4 @@ aws-pyspark-ci-cd/
 
 ## CI/CD
 - On push, GitHub Actions will run the ETL job and (optionally) deploy to AWS. # Update trigger
+# Update trigger
