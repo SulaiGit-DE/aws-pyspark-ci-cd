@@ -40,4 +40,17 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: ap-south-1
         SOURCE_DIR: build
-        DEST_DIR: glue-jobs/ 
+        DEST_DIR: glue-jobs/
+
+    - name: Install AWS CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y awscli
+
+    - name: 🚀 Trigger AWS Glue Job
+      run: |
+        aws glue start-job-run --job-name pyspark_ci_job
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ap-south-1 
