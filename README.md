@@ -34,3 +34,8 @@ aws-pyspark-ci-cd/
 # AWS PySpark CI/CD
 
 ![CI](https://github.com/SulaiGit-DE/aws-pyspark-ci-cd/actions/workflows/deploy.yml/badge.svg)
+
+
+#So I hope i completed the CI CD.
+
+-- Now from here what ever commit i made it automatically triggers the glue job.
