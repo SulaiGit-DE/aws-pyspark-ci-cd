@@ -42,6 +42,9 @@ jobs:
         SOURCE_DIR: build
         DEST_DIR: glue-jobs/
 
+    - name: Install dependencies for AWS CLI
+      run: sudo apt-get update && sudo apt-get install -y unzip
+
     - name: Install AWS CLI
       run: |
         curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
